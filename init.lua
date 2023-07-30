@@ -94,11 +94,11 @@ return {
       { desc = "Toggle Neotree", noremap = true, silent = true }
     )
     -- Move lines and blocks
-    map("n", "<A-k>", ":m .+1<CR>==", { desc = "Move line up", noremap = true, silent = true })
-    map("n", "<A-j>", ":m .-2<CR>==", { desc = "Move line down", noremap = true, silent = true })
+    map("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down", noremap = true, silent = true })
+    map("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up", noremap = true, silent = true })
     map("n", "<A-l>", "yyp", { desc = "Duplicate line", noremap = true, silent = true })
-    map("v", "<A-k>", ":m '>+1<CR>gv=gv", { desc = "Move block up", noremap = true, silent = true })
-    map("v", "<A-j>", ":m '<-2<CR>gv=gv", { desc = "Move block down", noremap = true, silent = true })
+    map("v", "<A-k>", ":m '>+1<CR>gv=gv", { desc = "Move block down", noremap = true, silent = true })
+    map("v", "<A-j>", ":m '<-2<CR>gv=gv", { desc = "Move block up", noremap = true, silent = true })
     map("v", "<A-l>", "Vy0P", { desc = "Duplicate block", noremap = true, silent = true })
   end,
 }
