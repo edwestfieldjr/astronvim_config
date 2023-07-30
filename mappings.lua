@@ -4,7 +4,12 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 
-local opts = { noremap = true, silent = true, nowait = true }
+-- local opts = {
+-- noremap = true,
+-- silent = true,
+-- nowait = true,
+-- }
+
 return {
   -- first key is the mode
 
@@ -38,7 +43,7 @@ return {
     ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line down" },
     ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },
     ["<A-l>"] = { "yyp", desc = "Duplicate line" },
-    -- [";"] = { ":", "Enter command mode" },
+    [";"] = { ":", desc = "Enter command mode" },
   },
 
   v = {
@@ -48,9 +53,9 @@ return {
   },
 
   i = {
-    ["<A-j>"] = { "<Esc>:m .+1<CR>==gi", desc = "Move block down" },
-    ["<A-k>"] = { "<Esc>:m .-2<cr>==gi", desc = "move block up" },
-    ["<A-l>"] = { "<Esc>yyp", desc = "Duplicate block" },
+    ["<A-j>"] = { "<Esc>:m .+1<CR>==gi", desc = "Move line down" },
+    ["<A-k>"] = { "<Esc>:m .-2<cr>==gi", desc = "move line up" },
+    ["<A-l>"] = { "<Esc>yyp", desc = "Duplicate line" },
   },
 
   t = {

@@ -27,17 +27,15 @@ return {
   --   end,
   -- },
   --   {
- -- installed by user on 2023-05-16: https://github.com/
-  {
-    "Pocco81/auto-save.nvim",
-    cmd = { "ASToggle" },
-    -- lazy = false,
-    event = edit_events,
-    config = function()
-      require("auto-save").setup()
-    end,
-  },
-
+  -- installed by user on 2023-05-16: https://github.com/
+  -- {
+  --   "Pocco81/auto-save.nvim",
+  --   cmd = { "ASToggle" },
+  --   -- lazy = false,
+  --   event = edit_events,
+  --   config = function() require("auto-save").setup() end,
+  -- },
+  --
   -- installed by user on 2023-05-16: https://github.com/codota/tabnine-nvim
   {
     "codota/tabnine-nvim",
@@ -58,27 +56,27 @@ return {
   },
 
   -- installed by user on 2023-05-20: https://github.com/stevearc/oil.nvim
-  {
-    "stevearc/oil.nvim",
-    opts = {
-      default_file_explorer = false,
-      view_options = {
-        show_hidden = true,
-      },
-      float = {
-        padding = 4,
-        max_width = 100,
-        max_height = 80,
-      },
-    },
-    init = function()
-      vim.keymap.set("n", "-", require("oil").open_float, { desc = "Open Oil (press '-' again for parent dir)" })
-    end,
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function(this)
-      require("oil").setup(this.opts)
-    end,
-  },
+  -- {
+  --   "stevearc/oil.nvim",
+  --   opts = {
+  --     default_file_explorer = false,
+  --     view_options = {
+  --       show_hidden = true,
+  --     },
+  --     float = {
+  --       padding = 4,
+  --       max_width = 100,
+  --       max_height = 80,
+  --     },
+  --   },
+  --   init = function()
+  --     vim.keymap.set("n", "-", require("oil").open_float, { desc = "Open Oil (press '-' again for parent dir)" })
+  --   end,
+  --   dependencies = { "nvim-tree/nvim-web-devicons" },
+  --   config = function(this)
+  --     require("oil").setup(this.opts)
+  --   end,
+  -- },
 
   -- installed by user on 2023-05-29: https://github.com/mg979/vim-visual-multi
   {
@@ -101,8 +99,6 @@ return {
       vim.keymap.set("n", "=", ":LiveServerStart<CR>", { desc = "Start Live Server" })
       vim.keymap.set("n", "<C-=>", ":LiveServerStop<CR>", { desc = "Stop Live Server" })
     end,
-    config = function()
-      require("live-server").setup()
-    end,
+    config = function() require("live-server").setup() end,
   },
 }
