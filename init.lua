@@ -85,20 +85,19 @@ return {
     --   },
     -- }
 
-    local map = vim.keymap.set
     -- Add Neotree toggle keymap
+    local map = vim.keymap.set
     map(
       { "n", "v", "i" },
       "<C-;>",
       "<Esc>:Neotree toggle<CR>",
       { desc = "Toggle Neotree", noremap = true, silent = true }
     )
-    -- map("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down", noremap = true, silent = true })
-    -- map("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up", noremap = true, silent = true })
-    -- map("n", "<A-l>", "yyp", { desc = "Duplicate line", noremap = true, silent = true })
-    -- map("v", "<A-k>", ":m '>+1<CR>gv=gv", { desc = "Move block down", noremap = true, silent = true })
-    -- map("v", "<A-j>", ":m '<-2<CR>gv=gv", { desc = "Move block up", noremap = true, silent = true })
-    -- map("v", "<A-l>", "Vy0P", { desc = "Duplicate block", noremap = true, silent = true })
-    -- -- Move lines and blocks
+
+    -- set 'ut' to 15 seconds when in insert mode"
+    vim.cmd "au InsertEnter * let updaterestore = &ut | set ut=15000"
+    vim.cmd "au InsertLeave * let &ut = updaterestore"
+    -- automatically leave insert mode after 'ut' milliseconds of inaction
+    vim.cmd "au CursorHoldI * stopinsert"
   end,
 }

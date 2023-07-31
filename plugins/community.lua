@@ -75,7 +75,12 @@ return {
   {
     "Pocco81/auto-save.nvim",
     cmd = { "ASToggle" },
-    event = { "User AstroFile", "InsertEnter" },
+    event = {
+      -- "User AstroFile",
+      -- "InsertEnter",
+      -- "BufLeave",
+      -- "BufWinLeave",
+    },
     opts = {},
   },
 }
