@@ -84,8 +84,8 @@ return {
     event = edit_events,
     init = function()
       vim.cmd "let g:VM_maps = {}"
-      vim.cmd "let g:VM_maps['Find Under'] = '<C-l>'"
-      vim.cmd "let g:VM_maps['Find Subword Under'] = '<C-l>'"
+      vim.cmd "let g:VM_maps['Find Under'] = '<C-x>'"
+      vim.cmd "let g:VM_maps['Find Subword Under'] = '<C-x>'"
     end,
     --      override to ensure lsp automatically on new/open file
   },

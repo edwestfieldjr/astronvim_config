@@ -66,6 +66,7 @@ return {
       vim.keymap.set("n", "-", require("oil").open_float, { desc = "Open Oil (press '-' again for parent dir)" })
     end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
+
     --   config = function(this)
     --     require("oil").setup(this.opts)
     --   end,:
@@ -76,11 +77,11 @@ return {
     "Pocco81/auto-save.nvim",
     cmd = { "ASToggle" },
     event = {
-      -- "User AstroFile",
-      -- "InsertEnter",
-      -- "BufLeave",
-      -- "BufWinLeave",
+      "User AstroFile",
+      "InsertEnter",
     },
     opts = {},
+    init = function() vim.keymap.set("n", "<leader>v", ":ASToggle<CR>", { desc = "toggle auto-save" }) end,
+    debounce_delay = 1000,
   },
 }

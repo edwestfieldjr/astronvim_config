@@ -99,5 +99,7 @@ return {
     vim.cmd "au InsertLeave * let &ut = updaterestore"
     -- automatically leave insert mode after 'ut' milliseconds of inaction
     vim.cmd "au CursorHoldI * stopinsert"
+
+    vim.cmd "set whichwrap+=<,>,[,]"
   end,
 }
