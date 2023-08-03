@@ -63,7 +63,8 @@ return {
       },
     },
     init = function()
-      vim.keymap.set("n", "-", require("oil").open_float, { desc = "Open Oil (press '-' again for parent dir)" })
+      vim.keymap.set("n", "2", require("oil").toggle_float, { desc = "Toogle Oil" })
+      vim.keymap.set("n", "3", require("oil").toggle_hidden, {})
     end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
 
@@ -82,6 +83,6 @@ return {
     },
     opts = {},
     init = function() vim.keymap.set("n", "<leader>v", ":ASToggle<CR>", { desc = "toggle auto-save" }) end,
-    debounce_delay = 1000,
+    debounce_delay = 2000,
   },
 }

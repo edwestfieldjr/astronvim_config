@@ -37,23 +37,23 @@ return {
   -- },
   --
   -- installed by user on 2023-05-16: https://github.com/codota/tabnine-nvim
-  {
-    "codota/tabnine-nvim",
-    event = edit_events,
-    -- lazy = false,
-    config = function()
-      require("tabnine").setup {
-        disable_auto_comment = true,
-        accept_keymap = "<M-Tab>",
-        dismiss_keymap = "<M-Esc>",
-        debounce_ms = 800,
-        suggestion_color = { gui = "#808080", cterm = 244 },
-        exclude_filetypes = { "TelescopePrompt" },
-        log_file_path = nil, -- absolute path to Tabnine log file
-      }
-    end,
-    build = "./dl_binaries.sh",
-  },
+  -- {
+  --   "codota/tabnine-nvim",
+  --   event = edit_events,
+  --   -- lazy = false,
+  --   config = function()
+  --     require("tabnine").setup {
+  --       disable_auto_comment = true,
+  --       accept_keymap = "<M-Tab>",
+  --       dismiss_keymap = "<M-Esc>",
+  --       debounce_ms = 800,
+  --       suggestion_color = { gui = "#808080", cterm = 244 },
+  --       exclude_filetypes = { "TelescopePrompt" },
+  --       log_file_path = nil, -- absolute path to Tabnine log file
+  --     }
+  --   end,
+  --   build = "./dl_binaries.sh",
+  -- },
 
   -- installed by user on 2023-05-20: https://github.com/stevearc/oil.nvim
   -- {

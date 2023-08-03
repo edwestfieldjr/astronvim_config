@@ -87,12 +87,7 @@ return {
 
     -- Add Neotree toggle keymap
     local map = vim.keymap.set
-    map(
-      { "n", "v", "i" },
-      "<C-;>",
-      "<Esc>:Neotree toggle<CR>",
-      { desc = "Toggle Neotree", noremap = true, silent = true }
-    )
+    map({ "n", "v" }, "1", "<Esc>:Neotree toggle<CR>", { desc = "Toggle Neotree", noremap = true, silent = true })
 
     -- set 'ut' to 15 seconds when in insert mode"
     vim.cmd "au InsertEnter * let updaterestore = &ut | set ut=15000"
