@@ -76,13 +76,19 @@ return {
   { import = "astrocommunity.editing-support.auto-save-nvim" },
   {
     "Pocco81/auto-save.nvim",
-    cmd = { "ASToggle" },
-    event = {
-      "User AstroFile",
-      "InsertEnter",
+    opts = {
+      trigger_events = {
+        "CursorHold",
+        "InsertLeave",
+        "TextChanged",
+        "TextChangedI",
+      },
+      event = {
+        "User AstroFile",
+        "InsertEnter",
+      },
+      debounce_delay = 2000,
     },
-    opts = {},
     init = function() vim.keymap.set("n", "<leader>v", ":ASToggle<CR>", { desc = "toggle auto-save" }) end,
-    debounce_delay = 2000,
   },
 }

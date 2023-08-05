@@ -5,9 +5,9 @@
 -- automatically pick-up stored data by this setting.)
 
 -- local opts = {
--- noremap = true,
--- silent = true,
--- nowait = true,
+--   noremap = true,
+--   silent = true,
+--   nowait = true,
 -- }
 
 return {
@@ -44,12 +44,13 @@ return {
     ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },
     ["<A-l>"] = { "yyp", desc = "Duplicate line" },
     [";"] = { ":", desc = "Enter command mode" },
+    ["f"] = {":Format<CR>", desc = "Format"};
   },
 
   v = {
-    ["<A-j>"] = { ":m '>+1<CR>gv=gv", desc = "Move block down" },
-    ["<A-k>"] = { ":m '<-2<cr>gv=gv", desc = "move block up" },
-    ["<A-l>"] = { "Vy0P", desc = "Duplicate block" },
+    ["<A-j>"] = { ":m '>+1<CR>'<v'>", desc = "Move block down" },
+    ["<A-k>"] = { ":m '<-2<cr>'<v'>", desc = "move block up" },
+    ["<A-l>"] = { "Vy0P'<v'>", desc = "Duplicate block" },
   },
 
   i = {
