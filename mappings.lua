@@ -44,9 +44,9 @@ return {
     ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },
     ["<A-l>"] = { "yyp", desc = "Duplicate line" },
     [";"] = { ":", desc = "Enter command mode" },
-    ["f"] = {":Format<CR>", desc = "Format"},
-    ["u"] = {":LspStop<CR>u<Esc>|:LspRestart<CR>", desc = "Undo" },
-    ["<C-r>"] = {":LspStop<CR><C-r><Esc>|:LspRestart<CR>", desc = "Redo" },
+    ["f"] = { ":Format<CR>", desc = "Format" },
+    ["u"] = { "u<Esc>", desc = "Undo" },
+    ["<C-r>"] = { "<C-r><Esc>", desc = "Redo" },
   },
 
   v = {
