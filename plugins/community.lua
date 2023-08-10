@@ -88,7 +88,26 @@ return {
         "InsertEnter",
       },
       debounce_delay = 2000,
+      callbacks = {
+        before_saving = function()
+          vim.g.OLD_AUTOFORMAT = vim.b.autoformat_enabled
+          vim.b.autoformat_enabled = false
+        end,
+
+        after_saving = function() vim.b.autoformat_enabled = vim.g.OLD_AUTOFORMAT end,
+      },
     },
     init = function() vim.keymap.set("n", "<leader>v", ":ASToggle<CR>", { desc = "toggle auto-save" }) end,
   },
 }
+
+--[[
+-- before saving: 
+vim.g.OLD_AUTOFORMAT = vim.b.autoformat_enabled
+vim.b.autoformat_enabled = false
+
+
+after saving:
+
+vim.b.autoformat_enabled = vim.g.OLD_AUTOFORMAT
+--]]
