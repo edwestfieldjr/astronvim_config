@@ -22,6 +22,7 @@ return {
       },
     },
   },
+
   { import = "astrocommunity.completion.copilot-lua" },
   { -- further customize the options set by the community
     "copilot.lua",
@@ -67,47 +68,11 @@ return {
       vim.keymap.set("n", "3", require("oil").toggle_hidden, {})
     end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
-
-    --   config = function(this)
-    --     require("oil").setup(this.opts)
-    --   end,:
   },
 
   { import = "astrocommunity.editing-support.auto-save-nvim" },
   {
-    "Pocco81/auto-save.nvim",
-    opts = {
-      trigger_events = {
-        "CursorHold",
-        "InsertLeave",
-        "TextChanged",
-        "TextChangedI",
-      },
-      event = {
-        "User AstroFile",
-        "InsertEnter",
-      },
-      debounce_delay = 2000,
-      callbacks = {
-        before_saving = function()
-          vim.g.OLD_AUTOFORMAT = vim.b.autoformat_enabled
-          vim.b.autoformat_enabled = false
-        end,
-
-        after_saving = function() vim.b.autoformat_enabled = vim.g.OLD_AUTOFORMAT end,
-      },
-    },
+    "zoriya/auto-save.nvim", -- HACK: use fork until PR is accepted: https://github.com/AstroNvim/astrocommunity/pull/511
     init = function() vim.keymap.set("n", "<leader>v", ":ASToggle<CR>", { desc = "toggle auto-save" }) end,
   },
 }
-
---[[
--- before saving: 
-vim.g.OLD_AUTOFORMAT = vim.b.autoformat_enabled
-vim.b.autoformat_enabled = false
-
-
-after saving:
-
-vim.b.autoformat_enabled = vim.g.OLD_AUTOFORMAT
---]]
