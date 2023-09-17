@@ -101,4 +101,15 @@ return {
     end,
     config = function() require("live-server").setup() end,
   },
+
+  -- installed by user on 2023-09-15: https://github.com/edluffy/hologram.nvim
+  {
+    "edluffy/hologram.nvim",
+    event = edit_events,
+    config = function()
+      require("hologram").setup {
+        auto_display = true, -- WIP automatic markdown image display, may be prone to breakini
+      }
+    end,
+  },
 }

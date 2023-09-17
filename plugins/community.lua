@@ -64,8 +64,8 @@ return {
       },
     },
     init = function()
-      vim.keymap.set("n", "2", require("oil").toggle_float, { desc = "Toogle Oil" })
-      vim.keymap.set("n", "3", require("oil").toggle_hidden, {})
+      vim.keymap.set("n", "<A-2>", require("oil").toggle_float, { desc = "Toogle Oil" })
+      vim.keymap.set("n", "<A-3>", require("oil").toggle_hidden, { desc = "Oil: Toogle Hidden" })
     end,
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
