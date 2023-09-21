@@ -105,7 +105,7 @@ return {
   -- installed by user on 2023-09-15: https://github.com/edluffy/hologram.nvim
   {
     "edluffy/hologram.nvim",
-    init: = function()
+    init = function()
       require("hologram").setup {
         auto_display = true, -- WIP automatic markdown image display, may be prone to breakini
       }
