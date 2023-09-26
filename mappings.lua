@@ -48,6 +48,7 @@ return {
 
     ["<C-i>"] = { ":CccConvert<CR>", desc = "CCC Convert Color" },
     ["<C-S-i>"] = { ":CccPick<CR>", desc = "CCC Color Picker" },
+    ["<C-A-i>"] = { ":CccHighlighterToggle<CR>", desc = "CCC Toggle Highlight" },
   },
 
   v = {
