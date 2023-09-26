@@ -75,4 +75,30 @@ return {
     "zoriya/auto-save.nvim", -- HACK: use fork until PR is accepted: https://github.com/AstroNvim/astrocommunity/pull/511
     init = function() vim.keymap.set("n", "<leader>v", ":ASToggle<CR>", { desc = "toggle auto-save" }) end,
   },
+  { import = "astrocommunity.color.ccc-nvim" },
+  {
+    "uga-rosa/ccc.nvim",
+    init = function()
+      local ccc = require "ccc"
+      ccc.setup {
+        -- Your preferred settings
+        -- Example: enable highlighter
+        highlighter = {
+          auto_enable = true,
+          lsp = true,
+        },
+        pickers = {
+          ccc.picker.hex,
+          ccc.picker.css_rgb,
+          ccc.picker.css_hsl,
+          ccc.picker.css_hwb,
+          ccc.picker.css_lab,
+          ccc.picker.css_lch,
+          ccc.picker.css_oklab,
+          ccc.picker.css_oklch,
+          ccc.picker.css_name,
+        },
+      }
+    end,
+  },
 }

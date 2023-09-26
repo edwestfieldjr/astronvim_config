@@ -45,6 +45,9 @@ return {
     ["<A-l>"] = { "yyp", desc = "Duplicate line" },
     [";"] = { ":", desc = "Enter command mode" },
     ["f"] = { ":Format<CR>", desc = "Format" },
+
+    ["<C-i>"] = { ":CccConvert<CR>", desc = "CCC Convert Color" },
+    ["<C-S-i>"] = { ":CccPick<CR>", desc = "CCC Color Picker" },
   },
 
   v = {
