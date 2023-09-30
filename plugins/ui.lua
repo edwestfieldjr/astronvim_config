@@ -32,4 +32,12 @@ return {
       },
     },
   },
+  {
+    'prisma/vim-prisma',
+    ft = { 'prisma' },
+  },
+  {
+    'pantharshit00/coc-prisma',
+    ft = { 'prisma' },
+  }
 }

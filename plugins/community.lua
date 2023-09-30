@@ -99,6 +99,13 @@ return {
           ccc.picker.css_oklch,
           ccc.picker.css_name,
         },
+        convert = {
+          { ccc.picker.hex, ccc.output.css_rgb },
+          { ccc.picker.css_rgb, ccc.output.hex },
+        },
+        mappings = {
+          ["<Esc>"] = ccc.mapping.quit;
+        }
       }
     end,
   },

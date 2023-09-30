@@ -17,6 +17,8 @@ return {
         "pyright",
         "jsonls",
         "marksman",
+        "sqlls",
+        "prismals"
       })
     end,
   },
@@ -34,6 +36,7 @@ return {
         "autopep8",
         "markdownlint",
         "ts-standard",
+        "sqlfmt"
       })
     end,
   },
@@ -50,6 +53,7 @@ return {
         "typescript",
         "javscript",
         "go",
+        "sql"
       })
     end,
   },
