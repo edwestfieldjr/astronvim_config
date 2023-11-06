@@ -36,7 +36,8 @@ return {
         "autopep8",
         "markdownlint",
         "ts-standard",
-        "sqlfmt"
+        "sqlfmt",
+        "clang-format",
       })
     end,
   },
