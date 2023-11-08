@@ -4,6 +4,13 @@ return {
     -- config variable is the default configuration table for the setup function call
     local null_ls = require "null-ls"
 
+    local notify = vim.notify
+    vim.notify = function(msg, ...)
+      if msg:match "warning: multiple different client offset_encodings" then return end
+
+      notify(msg, ...)
+    end
+
     -- Check supported formatters and linters
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
