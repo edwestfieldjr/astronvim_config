@@ -72,7 +72,8 @@ return {
 
   { import = "astrocommunity.editing-support.auto-save-nvim" },
   {
-    "pocco81/auto-save.nvim", -- HACK: use fork until PR is accepted: https://github.com/AstroNvim/astrocommunity/pull/511
+    -- "pocco81/auto-save.nvim"
+    "okuuva/auto-save.nvim", -- HACK: use fork until PR is accepted: https://github.com/pocco81/auto-save.nvim/pull/67
     init = function() vim.keymap.set("n", "<leader>v", ":ASToggle<CR>", { desc = "toggle auto-save" }) end,
   },
 
@@ -104,8 +105,8 @@ return {
           { ccc.picker.css_rgb, ccc.output.hex },
         },
         mappings = {
-          ["<Esc>"] = ccc.mapping.quit;
-        }
+          ["<Esc>"] = ccc.mapping.quit,
+        },
       }
     end,
   },
