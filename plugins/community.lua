@@ -72,8 +72,7 @@ return {
 
   { import = "astrocommunity.editing-support.auto-save-nvim" },
   {
-    -- "pocco81/auto-save.nvim"
-    "okuuva/auto-save.nvim", -- HACK: use fork until PR is accepted: https://github.com/pocco81/auto-save.nvim/pull/67
+    "pocco81/auto-save.nvim",
     init = function() vim.keymap.set("n", "<leader>v", ":ASToggle<CR>", { desc = "toggle auto-save" }) end,
   },
 
