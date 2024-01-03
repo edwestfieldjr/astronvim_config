@@ -81,7 +81,7 @@ return {
   -- installed by user on 2023-05-29: https://github.com/mg979/vim-visual-multi
   {
     "mg979/vim-visual-multi",
-    event = edit_events,
+    -- event = edit_events,
     init = function()
       vim.cmd "let g:VM_maps = {}"
       vim.cmd "let g:VM_maps['Find Under'] = '<C-x>'"

@@ -48,17 +48,12 @@ return {
       --   return true
       -- end
     },
-    -- enable servers that you already have installed without mason
-    servers = {
-      -- "pyright",
-      -- "tsserver",
-      -- "lua_ls",
-      -- "stylua",
-    },
-    -- config = {
-    --   clangd = {
-    --     setup = function(_, opts) opts.capabilities.offsetEncoding = { "utf-8", "utf-16", "utf-32" } end,
-    --   },
+    -- -- enable servers that you already have installed without mason
+    -- servers = {
+    --   "pyright",
+    --   "tsserver",
+    --   "lua_ls",
+    --   "stylua",
     -- },
   },
 
