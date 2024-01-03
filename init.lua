@@ -55,6 +55,11 @@ return {
       -- "lua_ls",
       -- "stylua",
     },
+    -- config = {
+    --   clangd = {
+    --     setup = function(_, opts) opts.capabilities.offsetEncoding = { "utf-8", "utf-16", "utf-32" } end,
+    --   },
+    -- },
   },
 
   -- Configure require("lazy").setup() options
@@ -89,12 +94,12 @@ return {
     local map = vim.keymap.set
     map({ "n", "v" }, "<A-1>", "<Esc>:Neotree toggle<CR>", { desc = "Toggle Neotree", noremap = true, silent = true })
 
-    -- set 'ut' to 15 seconds when in insert mode"
-    vim.cmd "au InsertEnter * let updaterestore = &ut | set ut=15000"
-    vim.cmd "au InsertLeave * let &ut = updaterestore"
-    -- automatically leave insert mode after 'ut' milliseconds of inaction
-    vim.cmd "au CursorHoldI * stopinsert"
-
-    vim.cmd "set whichwrap+=<,>,[,]"
+    -- -- set 'ut' to 15 seconds when in insert mode"
+    -- vim.cmd "au InsertEnter * let updaterestore = &ut | set ut=15000"
+    -- vim.cmd "au InsertLeave * let &ut = updaterestore"
+    -- -- automatically leave insert mode after 'ut' milliseconds of inaction
+    -- vim.cmd "au CursorHoldI * stopinsert"
+    --
+    -- vim.cmd "set whichwrap+=<,>,[,]"
   end,
 }

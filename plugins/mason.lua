@@ -10,7 +10,7 @@ return {
         "lua_ls",
         "rust_analyzer",
         "tsserver",
-        "clangd",
+        -- "clangd",
         "html",
         "cssls",
         "tailwindcss",
@@ -18,7 +18,7 @@ return {
         "jsonls",
         "marksman",
         "sqlls",
-        "prismals"
+        "prismals",
       })
     end,
   },
@@ -54,7 +54,7 @@ return {
         "typescript",
         "javscript",
         "go",
-        "sql"
+        "sql",
       })
     end,
   },

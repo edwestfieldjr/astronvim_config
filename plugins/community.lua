@@ -109,4 +109,9 @@ return {
       }
     end,
   },
+  { import = "astrocommunity.code-runner.overseer-nvim" },
+  {
+    "stevearc/overseer.nvim",
+    opts = {},
+  },
 }
