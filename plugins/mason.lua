@@ -12,6 +12,7 @@ return {
         "tsserver",
         "clangd",
         "html",
+        "htmx",
         "cssls",
         "tailwindcss",
         "pyright",
@@ -19,6 +20,10 @@ return {
         "marksman",
         "sqlls",
         "prismals",
+        "zls",
+        "yamlls",
+        "dockerls",
+        "gopls",
       })
     end,
   },
@@ -55,6 +60,7 @@ return {
         "javscript",
         "go",
         "sql",
+        "zig",
       })
     end,
   },
