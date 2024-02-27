@@ -20,7 +20,7 @@ return {
       "c",
       "cpp",
       "zig",
-      "pkl",
+      -- "pkl",
     })
   end,
 }

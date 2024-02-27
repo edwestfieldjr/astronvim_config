@@ -114,4 +114,5 @@ return {
     "stevearc/overseer.nvim",
     opts = {},
   },
+  { import = "astrocommunity.pack.pkl" },
 }
