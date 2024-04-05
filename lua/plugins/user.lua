@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
@@ -23,17 +23,17 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        "    █████  ███████ ████████ ██████   ██████",
+        "   ██   ██ ██         ██    ██   ██ ██    ██",
+        "   ███████ ███████    ██    ██████  ██    ██",
+        "   ██   ██      ██    ██    ██   ██ ██    ██",
+        "   ██   ██ ███████    ██    ██   ██  ██████",
+        "g i t h u b . c o m / e d w e s t f i e l d j r",
+        "       ███    ██ ██    ██ ██ ███    ███",
+        "       ████   ██ ██    ██ ██ ████  ████",
+        "       ██ ██  ██ ██    ██ ██ ██ ████ ██",
+        "       ██  ██ ██  ██  ██  ██ ██  ██  ██",
+        "       ██   ████   ████   ██ ██      ██",
       }
       return opts
     end,
@@ -80,6 +80,35 @@ return {
         -- disable for .vim files, but it work for another filetypes
         Rule("a", "a", "-vim")
       )
+    end,
+  },
+  {
+    "mg979/vim-visual-multi",
+    -- event = edit_events,
+    init = function()
+      vim.cmd "let g:VM_maps = {}"
+      vim.cmd "let g:VM_maps['Find Under'] = '<C-x>'"
+      vim.cmd "let g:VM_maps['Find Subword Under'] = '<C-x>'"
+    end,
+    --      override to ensure lsp automatically on new/open file
+  },
+
+  -- installed by user on 2023-05-30: https://github.com/barrett-ruth/live-server.nvim
+  {
+    "barrett-ruth/live-server.nvim",
+    build = "npm i -g live-server",
+    ft = { "html", "css", "javascript" },
+    init = function() vim.keymap.set("n", "=", ":LiveServerToggle<CR>", { desc = "Start Live Server" }) end,
+    config = function() require("live-server").setup() end,
+  },
+
+  -- installed by user on 2023-09-15: https://github.com/edluffy/hologram.nvim
+  {
+    "edluffy/hologram.nvim",
+    init = function()
+      require("hologram").setup {
+        auto_display = true, -- WIP automatic markdown image display, may be prone to breakini
+      }
     end,
   },
 }

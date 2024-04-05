@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -17,7 +17,7 @@ return {
       cmp = true, -- enable completion at start
       diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
       highlighturl = true, -- highlight URLs at start
-      notifications = true, -- enable notifications at start
+      notifications = false, -- enable notifications at start
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
@@ -29,9 +29,9 @@ return {
       opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
+        spell = true, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -69,7 +69,29 @@ return {
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+
+        ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line down" },
+        ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },
+        ["<A-l>"] = { "yyp", desc = "Duplicate line" },
+        [";"] = { ":", desc = "Enter command mode" },
+        ["f"] = { ":Format<CR>", desc = "Format" },
+
+        ["<C-i>"] = { ":CccConvert<CR>", desc = "CCC Convert Color" },
+        ["<C-S-i>"] = { ":CccPick<CR>", desc = "CCC Color Picker" },
+        ["<C-A-i>"] = { ":CccHighlighterToggle<CR>", desc = "CCC Toggle Highlight" },
+      },
+
+      v = {
+        ["<A-j>"] = { ":m '>+1<CR>'<v'>", desc = "Move block down" },
+        ["<A-k>"] = { ":m '<-2<cr>'<v'>", desc = "move block up" },
+        ["<A-l>"] = { "Vy0P'<v'>", desc = "Duplicate block" },
+      },
+
+      i = {
+        ["<A-j>"] = { "<Esc>:m .+1<CR>==gi", desc = "Move line down" },
+        ["<A-k>"] = { "<Esc>:m .-2<cr>==gi", desc = "move line up" },
+        ["<A-l>"] = { "<Esc>yyp", desc = "Duplicate line" },
       },
       t = {
         -- setting a mapping to false will disable it
