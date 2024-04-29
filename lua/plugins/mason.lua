@@ -14,6 +14,7 @@ return {
         "lua_ls",
         "rust_analyzer",
         "tsserver",
+        "ts-standard",
         "clangd",
         "html",
         "htmx",
@@ -47,7 +48,7 @@ return {
         "autopep8",
         "markdownlint",
         "ts-standard",
-        "sqlfmt",
+        "sql-formatter",
         "clang-format",
         -- add more arguments for adding more null-ls sources
       })

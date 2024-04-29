@@ -134,8 +134,9 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.tailwindcss" },
-  { import = "astrocommunity.pack.sql" },
+  -- { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.go" },
   --
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  { import = "astrocommunity.media.image-nvim" },
 }
