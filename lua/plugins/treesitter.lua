@@ -26,6 +26,7 @@ return {
       "c",
       "cpp",
       "zig",
+      "kdl",
       -- "pkl",
       -- add more arguments for adding more treesitter parsers
     })
