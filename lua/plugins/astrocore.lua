@@ -17,7 +17,7 @@ return {
       cmp = true, -- enable completion at start
       diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
       highlighturl = true, -- highlight URLs at start
-      notifications = false, -- enable notifications at start
+      notifications = true, -- enable notifications at start
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
@@ -74,6 +74,7 @@ return {
         ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line down" },
         ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },
         ["<A-l>"] = { "yyp", desc = "Duplicate line" },
+        ["<A-h>"] = { "gg0vGy", desc = "Copy/yank all text" },
         [";"] = { ":", desc = "Enter command mode" },
         ["f"] = { ":Format<CR>", desc = "Format" },
 
@@ -84,13 +85,14 @@ return {
 
       v = {
         ["<A-j>"] = { ":m '>+1<CR>'<v'>", desc = "Move block down" },
-        ["<A-k>"] = { ":m '<-2<cr>'<v'>", desc = "move block up" },
+        ["<A-k>"] = { ":m '<-2<CR>'<v'>", desc = "move block up" },
         ["<A-l>"] = { "Vy0P'<v'>", desc = "Duplicate block" },
+        ["<A-h>"] = { "<Esc>gg0vGy", desc = "Copy/yank all text" },
       },
 
       i = {
         ["<A-j>"] = { "<Esc>:m .+1<CR>==gi", desc = "Move line down" },
-        ["<A-k>"] = { "<Esc>:m .-2<cr>==gi", desc = "move line up" },
+        ["<A-k>"] = { "<Esc>:m .-2<CR>==gi", desc = "move line up" },
         ["<A-l>"] = { "<Esc>yyp", desc = "Duplicate line" },
       },
       t = {

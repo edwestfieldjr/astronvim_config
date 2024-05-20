@@ -14,7 +14,6 @@ return {
         "lua_ls",
         "rust_analyzer",
         "tsserver",
-        "ts-standard",
         "clangd",
         "html",
         "htmx",

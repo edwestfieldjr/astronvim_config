@@ -138,6 +138,6 @@ return {
   -- { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.go" },
   --
-  { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.media.image-nvim" },
 }
