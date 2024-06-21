@@ -74,7 +74,7 @@ return {
         ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line down" },
         ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },
         ["<A-l>"] = { "yyp", desc = "Duplicate line" },
-        ["<A-h>"] = { "gg0vGy", desc = "Copy/yank all text" },
+        ["<A-h>"] = { "gg0vG%y", desc = "Copy/yank all text" },
         [";"] = { ":", desc = "Enter command mode" },
         ["f"] = { ":Format<CR>", desc = "Format" },
 
@@ -87,7 +87,7 @@ return {
         ["<A-j>"] = { ":m '>+1<CR>'<v'>", desc = "Move block down" },
         ["<A-k>"] = { ":m '<-2<CR>'<v'>", desc = "move block up" },
         ["<A-l>"] = { "Vy0P'<v'>", desc = "Duplicate block" },
-        ["<A-h>"] = { "<Esc>gg0vGy", desc = "Copy/yank all text" },
+        ["<A-h>"] = { "<Esc>gg0G%y", desc = "Copy/yank all text" },
       },
 
       i = {
