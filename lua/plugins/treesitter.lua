@@ -25,6 +25,7 @@ return {
       "java",
       "c",
       "cpp",
+      "sql",
       "zig",
       "kdl",
       -- "pkl",

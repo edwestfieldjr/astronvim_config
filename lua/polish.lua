@@ -7,17 +7,17 @@
 -- Set up custom filetypes
 vim.filetype.add {
   extension = {
-    foo = "fooscript",
+    mysql = "sql",
   },
   filename = {
-    ["Foofile"] = "fooscript",
+    ["mysql"] = "sql",
   },
   pattern = {
-    ["~/%.config/foo/.*"] = "fooscript",
+    ["~/%.config/mysql/.*"] = "sql",
   },
 }
 
--- Enable & customise spell checking
+-- Enable & customize spell checking
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
 vim.api.nvim_set_hl(
