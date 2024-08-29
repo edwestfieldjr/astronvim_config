@@ -114,7 +114,7 @@ return {
     end,
   },
 
-  -- installed by user on 2024-08-04:  https://github.com/stevearc/conform.nvim
+  -- installed by user on 2024-08-04: https://github.com/stevearc/conform.nvim
   {
     "stevearc/conform.nvim",
     opts = {},
@@ -133,5 +133,9 @@ return {
         },
       }
     end,
+  },
+  -- installed by user on 2024-08-29: https://github.com/rest-nvim/rest.nvim
+  {
+    "rest-nvim/rest.nvim",
   },
 }

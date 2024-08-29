@@ -28,6 +28,7 @@ return {
       "sql",
       "zig",
       "kdl",
+      "http",
       -- "pkl",
       -- add more arguments for adding more treesitter parsers
     })
