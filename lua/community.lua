@@ -125,19 +125,18 @@ return {
     "stevearc/overseer.nvim",
     opts = {},
   },
-  { import = "astrocommunity.pack.pkl" }, -- import/override with your plugins folder
+  -- { import = "astrocommunity.pack.pkl" }, -- import/override with your plugins folder
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.python" },
-  -- { import = "astrocommunity.pack.typescript" },
+  -- -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.yaml" },
   -- { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.go" },
-  --
-  -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  -- -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.media.image-nvim" },
 }

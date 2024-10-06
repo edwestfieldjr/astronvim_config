@@ -128,8 +128,10 @@ return {
           -- rust = { "rustfmt", lsp_format = "fallback" },
           -- Conform will run the first available formatter
           javascript = { "prettierd", "prettier", stop_after_first = true },
-          sql = { "sql-formatterer" },
-          mysql = { "sql-formatterer" },
+          html = { "prettierd", "prettier", "html", stop_after_first = true },
+          css = { "prettierd", "prettier", stop_after_first = true },
+          sql = { "sql-formatter" },
+          mysql = { "sql-formatter" },
         },
       }
     end,
