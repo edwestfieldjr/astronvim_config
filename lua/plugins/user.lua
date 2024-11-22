@@ -109,7 +109,7 @@ return {
     "edluffy/hologram.nvim",
     init = function()
       require("hologram").setup {
-        auto_display = true, -- WIP automatic markdown image display, may be prone to breakini
+        auto_display = false, -- WIP automatic markdown image display, may be prone to breakini
       }
     end,
   },
