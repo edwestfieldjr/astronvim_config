@@ -81,6 +81,9 @@ return {
         ["<C-i>"] = { ":CccConvert<CR>", desc = "CCC Convert Color" },
         ["<C-S-i>"] = { ":CccPick<CR>", desc = "CCC Color Picker" },
         ["<C-A-i>"] = { ":CccHighlighterToggle<CR>", desc = "CCC Toggle Highlight" },
+        ["<rightmouse>"] = { "i", desc = "Click into Insert mode" },
+        ["<C-rightmouse>"] = { "v", desc = "Click into Visual mode" },
+        ["<C-Y>"] = { ":RenderMarkdown toggle<CR>", desc = "Toggle RenderMarkdown" },
       },
 
       v = {
@@ -88,12 +91,15 @@ return {
         ["<A-k>"] = { ":m '<-2<CR>'<v'>", desc = "move block up" },
         ["<A-l>"] = { "Vy0P'<v'>", desc = "Duplicate block" },
         ["<A-h>"] = { "<Esc>gg0G%y", desc = "Copy/yank all text" },
+        [";"] = { ":", desc = "Enter command mode" },
+        ["f"] = { ":Format<CR>", desc = "Format" },
+        ["<rightmouse>"] = { "<Esc>", desc = "return to normal mode" },
       },
-
       i = {
         ["<A-j>"] = { "<Esc>:m .+1<CR>==gi", desc = "Move line down" },
         ["<A-k>"] = { "<Esc>:m .-2<CR>==gi", desc = "move line up" },
         ["<A-l>"] = { "<Esc>yyp", desc = "Duplicate line" },
+        ["<rightmouse>"] = { "<Esc>", desc = "return to normal mode" },
       },
       t = {
         -- setting a mapping to false will disable it

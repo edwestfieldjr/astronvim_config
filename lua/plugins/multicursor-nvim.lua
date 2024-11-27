@@ -10,8 +10,8 @@ return {
       local set = vim.keymap.set
 
       -- Add or skip cursor above/below the main cursor.
-      set({ "n", "v" }, "<up>", function() mc.lineAddCursor(-1) end)
-      set({ "n", "v" }, "<down>", function() mc.lineAddCursor(1) end)
+      set({ "n", "v" }, "<M-up>", function() mc.lineAddCursor(-1) end)
+      set({ "n", "v" }, "<M-down>", function() mc.lineAddCursor(1) end)
       set({ "n", "v" }, "<leader><up>", function() mc.lineSkipCursor(-1) end)
       set({ "n", "v" }, "<leader><down>", function() mc.lineSkipCursor(1) end)
 
@@ -33,8 +33,8 @@ return {
       -- end)
 
       -- Rotate the main cursor.
-      set({ "n", "v" }, "<left>", mc.nextCursor)
-      set({ "n", "v" }, "<right>", mc.prevCursor)
+      set({ "n", "v" }, "<M-left>", mc.nextCursor)
+      set({ "n", "v" }, "<M-right>", mc.prevCursor)
 
       -- Delete the main cursor.
       set({ "n", "v" }, "<leader>x", mc.deleteCursor)
