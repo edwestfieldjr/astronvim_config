@@ -12,7 +12,16 @@ return {
   opts = {
     -- change colorscheme
     -- colorscheme = "astrodark",
-    colorscheme = "catppuccin",
+    colorscheme = (function()
+      local colorscheme = ""
+      local status = os.execute "defaults read -g AppleInterfaceStyle"
+      if status == 0 then
+        colorscheme = "catppuccin"
+      else
+        colorscheme = "catppuccin-latte"
+      end
+      return colorscheme
+    end)(),
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
