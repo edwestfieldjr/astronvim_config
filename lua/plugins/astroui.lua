@@ -15,7 +15,7 @@ return {
     colorscheme = (function()
       local colorscheme = "astrodark"
       -- check if macOS dark mode is enabled
-      local status = os.execute "defaults read -g AppleInterfaceStyle &> /dev/null"
+      local status = os.execute "defaults read -g AppleInterfaceStyle"
       if status == 0 then
         colorscheme = "catppuccin"
       else
