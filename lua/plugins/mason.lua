@@ -20,7 +20,7 @@ return {
         "htmx",
         "cssls",
         "tailwindcss",
-        "pyright",
+        -- "pyright",
         "jsonls",
         "marksman",
         "sqlls",
